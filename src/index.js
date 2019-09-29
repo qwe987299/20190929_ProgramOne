@@ -1,4 +1,4 @@
 console.log('test');
-import './index.scss';
+import './styles/index.scss';
 
 import './logo.png';

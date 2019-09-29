@@ -1,0 +1,20 @@
+$bgcolor: #ccc;
+$linkcolor: #f00;
+@import "sprites";
+.icon{
+    &.icon-facebook{
+        @include sprite($facebook);
+    }
+    &.icon-instagram{
+        @include sprite($instagram);
+    }
+    &.icon-twitter{
+        @include sprite($twitter);
+    }
+}
+body {
+    background: $bgcolor;
+    a {
+        color: $linkcolor;
+    }
+}

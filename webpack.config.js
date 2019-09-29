@@ -1,9 +1,10 @@
 var path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports =   {
-    //mode: 'development',
+    mode: process.env.NODE_ENV || 'development',
     entry: './src/index.js' ,
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -48,6 +49,12 @@ module.exports =   {
             apiOptions: {
                 cssImageRef: "../image/sprite.png"
             }
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            hash: false,
+            template: './src/index.html',
+            filename: 'index.html'
         })
     ],
     devServer: {
