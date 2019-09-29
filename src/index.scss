@@ -1,0 +1,8 @@
+$bgcolor: #ccc;
+$linkcolor: #f00;
+body {
+    background: $bgcolor;
+    a {
+        color: $linkcolor;
+    }
+}
